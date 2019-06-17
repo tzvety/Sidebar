@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        
+        <title>Bootstrap Sidebar</title>
+        
+        <script src="https://kit.fontawesome.com/fe7f1c8014.js"></script>
+        <link href="assets/styles.css" rel="stylesheet" />
+
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <!-- Sidebar -->
+            <nav id="sidebar">
+
+                <div class="sidebar-header">
+                    <h4>BS</h4>
+                </div>
+        
+                <ul class="list-unstyled">
+
+                    <li class="active">
+
+                        <a href="#submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                        <ul class="collapse list-unstyled" id="submenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-briefcase"></i>
+                            FTW
+                        </a>
+                    </li>
+                    
+                </ul>
+
+            </nav>
+        
+            <!-- Page Content -->
+            <div id="content">
+                <button type="button" id="sidebarCollapse" class="btn-danger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        
+        </div> 
+
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.js"
+            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+            crossorigin="anonymous"></script>         
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').toggleClass('active');
+                    $(this).toggleClass('active');
+                });
+            });
+        </script>
+
+    </body>
+</html>
